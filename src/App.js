@@ -6,7 +6,7 @@ import lottery from './lottery';
 class App extends Component {
   
   state = {
-    manager: '',
+    owner: '',
     players: [],
     balanceOfContract: '0',
     value: '',
@@ -48,7 +48,7 @@ class App extends Component {
     return (
       <div>
         <h1>Lottery Contract</h1>
-        <p>This contract is managed by {this.state.manager}.</p>
+        <p>This contract is owned by {this.state.owner}.</p>
         <p>There are currently {this.state.players.length} people entered,
           competing to win {web3.utils.fromWei(this.state.balanceOfContract, 'ether')} ether!
         </p>
