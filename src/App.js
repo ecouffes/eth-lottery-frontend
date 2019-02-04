@@ -80,7 +80,7 @@ class App extends Component {
     // Object wrapped by BigNumber.js, not Number
     const balanceOfContract = await web3.eth.getBalance(lottery.options.address);
 
-    this.setState({ manager, players, balanceOfContract });
+    this.setState({ owner, players, balanceOfContract });
   }
 
   componentDidMount() {
