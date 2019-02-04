@@ -74,7 +74,7 @@ class App extends Component {
   }
 
   async contractStateUpdate() {
-    const manager = await lottery.methods.manager().call();
+    const owner = await lottery.methods.owner().call();
     const players = await lottery.methods.getPlayers().call();
 
     // Object wrapped by BigNumber.js, not Number
