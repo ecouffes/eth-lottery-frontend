@@ -1,7 +1,5 @@
 import web3 from './web3';
 
-// see deploy.js of eth-lottery repository
-
 // contract address on Rinkeby test network
 const address = '0xE6A36118D6aDe275EBC6a039d17e96EA9DABd38A';
 
@@ -53,8 +51,7 @@ const abi = [{
   "type": "constructor"
 }];
 
-// get local contract instance
-// not need promise
+// contract instance
 const lottery = new web3.eth.Contract(abi, address);
 
 export default lottery;
