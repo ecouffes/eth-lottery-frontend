@@ -4,25 +4,12 @@ import web3 from './web3';
 import lottery from './lottery';
 
 class App extends Component {
-
-  // constructor(props) {
-  //   super(props);
-  //
-  //   this.state = {
-  //     manager: '',
-  //     players: [],
-  //     balanceOfContract: '',
-  //     value: '',
-  //   }
-  // }
-
-  // ES2016 feature
-  // 変数を単体でクラス内に定義すると、自動的にコンストラクタメソッド内に定義されたものとなる。
+  
   state = {
     manager: '',
     players: [],
     balanceOfContract: '0',
-    value: '',  // unit is wei
+    value: '',
     message: '',
   };
 
@@ -55,17 +42,9 @@ class App extends Component {
     });
 
     this.setState({message: 'A winnder has been picked!'});
-
-
   }
 
-  // async is inacceptable
   render() {
-    // console.log
-    // console.log(web3.version);
-    // web3.eth.getAccounts().then(console.log);
-    // console.log(lottery);
-
     return (
       <div>
         <h1>Lottery Contract</h1>
